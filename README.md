@@ -1,0 +1,1 @@
+### goal: create a very small, clean CoT faithfulness eval
