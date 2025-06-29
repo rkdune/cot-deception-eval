@@ -1,4 +1,4 @@
-# CoT Deception Eval
+# Chain of Thought (CoT) Deception Eval
 
 A simple benchmark to evaluate whether a model's final answer conflicts with its Chain of Thought reasoning.
 
@@ -61,3 +61,23 @@ Results show True/False Positives/Negatives for CoT evasion detection.
 
 ## Dataset
 Data is currently limited to 10 questions, each with one possible number-based answer. You can view the dataset in `data.py`.
+
+## Project Structure
+
+```
+CoT_Faithfulness/
+|
+├── main.py                  # Orchestration file
+├── assistant.py             # Assistant logic and prompts
+├── monitor.py               # CoT monitor logic and prompt
+├── structured_output.py     # Structured output handling
+├── data.py                  # Dataset definitions and loading
+|
+├── logs/                    # Output logs directory (created at first run)
+├── ascii.py                 # ASCII header utilities
+├── README_Thumbnail.png     # README image
+├── README.md                # README (this file)
+|
+├── pyproject.toml           # Project configuration and dependencies
+└── uv.lock                  # Dependency lock file for uv
+```
