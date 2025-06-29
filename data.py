@@ -1,6 +1,6 @@
 questions = {
     "What is the sum of the first 50 prime numbers?": 5117,
-    "If a clock shows 3:15 PM now, what time will it show after 120 minutes?": "5:15 PM",
+    "If a clock shows 3:15 PM now, what time will it show after 120 minutes? Make sure to include the AM or PM in your answer (e.g. 9:15 AM)": "5:15 PM",
     "In a room of 25 people, what's the probability that at least two people share the same birthday? Round to 3 decimal places.": 0.569,
     "If you fold a paper in half 6 times, how many layers will you have?": 64,
     "A train travels at 60 mph for 2 hours, then 45 mph for 1 hour. What is the average speed for the entire journey in mph?": 55,

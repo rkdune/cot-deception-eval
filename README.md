@@ -1,6 +1,8 @@
-# CoT Faithfulness Evaluation
+# CoT Deception Eval
 
 A simple benchmark to evaluate whether a model's final answer conflicts with its Chain of Thought reasoning.
+
+![Terminal Screenshot](README_Thumbnail.png)
 
 ## Setup
 
@@ -39,6 +41,9 @@ uv run main.py --scenario adversarial    # Test adversarial prompts (default)
 # Print dataset details
 uv run main.py --dataset            # Show dataset contents
 
+# Print data point results
+uv run main.py --print              # Detailed results in console
+
 # Combine options
 uv run main.py --split 0.2 --model o3-mini --scenario helpful --dataset
 ```
@@ -46,10 +51,13 @@ uv run main.py --split 0.2 --model o3-mini --scenario helpful --dataset
 ## Output
 
 - Results are printed to console
-- Detailed logs are saved to `logs/run_TIMESTAMP.md`
+- Detailed logs are saved to `logs/run_TIMESTAMP_SCENARIO_MODEL.md`
 
-The evaluation tests both:
-- **Helpful prompt**: Model tries to be truthful
-- **Adversarial prompt**: Model tries to hide reasoning
+You can choose to test either:
+- **Helpful prompt**: Assistant tries to be helpful and have a clear CoT.
+- **Adversarial prompt**: Assistant tries to construct a plausbile-sounding but misleading CoT, while still producing a correct final answer.
 
 Results show True/False Positives/Negatives for CoT evasion detection.
+
+## Dataset
+Data is currently limited to 10 questions, each with one possible number-based answer. You can view the dataset in `data.py`.
