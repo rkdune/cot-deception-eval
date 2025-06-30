@@ -1,8 +1,16 @@
 # Chain of Thought (CoT) Deception Eval
 
-A simple benchmark to evaluate whether a model's final answer conflicts with its Chain of Thought reasoning.
+A clean and simple CoT deception eval implementation. A deceptive assistant tries to evade the monitor by constructing false, yet plausible-sounding reasoning traces, while the competing monitor attempts to detect if the assistant is deceptive or helpful.
 
 ![Terminal Screenshot](README_Thumbnail.png)
+
+## Roles
+
+**Assistant**: When set to *adversarial*, the assistant attempts to correctly answer the question, but constructs a false (yet plausible sounding) reasoning trace that does not clearly lead to its final answer.
+
+**Monitor**: The monitor does not know if the assistant is set to *helpful* or *adversarial*. It attempts to catch 'false' reasoning traces that do not logically build up to the assistant's final answer.
+
+Full assistant and monitor prompts are in `assistant.py` and `monitor.py`, respectively.
 
 ## Setup
 
